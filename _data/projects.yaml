@@ -1,0 +1,79 @@
+- title: PiE Robotics Kit
+  description: |
+    <p>
+      <a href="https://pioneers.berkeley.edu">Pioneers in Engineering</a> (PiE) is a volunteer-staffed organization at UC Berkeley that promotes STEM education among SF Bay area high schools.
+      Every spring, PiE hosts a twelve-week robotics competition where high school students compete in teams to solve the challenges of that year's game.
+      I co-lead engineering during year 11 (spring 2019).
+    </p>
+    <p>
+      Designed to give students hands-on engineering experience, the PiE robotics kit is a platform for building and operating a robot programmed in Python.
+      The kit allows users to control sensors and actuators through a high-level API without deep technical expertise.
+    </p>
+  figures:
+    - caption: The game field during a 2v2 match.
+      url: /assets/img/field.png
+    - caption: |
+        The base robot (assembled).
+        The onboard Raspberry Pi communicates with each Arduino-controlled sensor.
+      url: /assets/img/robot.png
+  links:
+    - title: repo
+      url: https://github.com/jonathan-j-lee/pie-central-fork
+    - title: docs
+      url: https://jonathan-l.ee/pie-central-fork
+- title: Video Compression Over Radio
+  description: |
+    <p>
+      Used <a href="https://en.wikipedia.org/wiki/Frequency-shift_keying">audio frequency-shift keying</a>, the <a href="https://en.wikipedia.org/wiki/AX.25">AX.25</a> protocol, and <a href="http://www.aprs.org/">APRS</a> to transmit a video between two radios.
+      On top of this layer, a lossy compression algorithm based on JPEG captures the salient features of each frame by:
+    </p>
+    <ul>
+      <li>Mapping the RGB frames to YCbCr and downsampling the chrominance components</li>
+      <li>Applying a discrete cosine transformation on each 8x8 block</li>
+      <li>Applying zero-run-length encoding on the reordered and quantized coefficients</li>
+      <li>Huffman coding the coefficient and run-length pairs</li>
+    </ul>
+  figures:
+    - caption: Input image.
+      url: /assets/img/cal-input.png
+      width: 40%
+    - caption: 'Output image. PSNR: 26.4 dB.'
+      url: /assets/img/cal-output.png
+      width: 40%
+  links:
+    - title: repo templates
+      url: https://github.com/EE123-students
+- title: Signals and Systems Labs
+  description: |
+    <p>
+      Jupyter notebook programming assignments I helped develop as a teaching assistant for <a href="https://inst.eecs.berkeley.edu/~ee120">EE 120</a> at Berkeley.
+      These labs guide students through implementing signal processing algorithms used in real applications and gives students practical experience with scientific computing libraries like NumPy and Matplotlib.
+      I contributed labs about:
+    </p>
+    <ul>
+      <li>Feedback control (using state-space and Laplace domain analysis to simulate satellite stabilization)</li>
+      <li>Communication (amplitude modulation and on-off keying)</li>
+    </ul>
+  figures:
+    - caption: Background information.
+      url: /assets/img/satellite-lab.png
+  links:
+    - title: repo
+      url: https://github.com/dominiccarrano/ee-120-labs
+    - title: paper
+      url: http://headconf.org/wp-content/uploads/pdfs/11308.pdf
+- title: Turtlebot Steering
+  description: |
+    <p>
+      We implemented two control strategies for steering a <a href="https://www.turtlebot.com/turtlebot2/">Turtlebot</a> into different positions: a bang-bang controller with proportional full-state feedback and a <a href="https://authors.library.caltech.edu/7315/1/MURieeetac93.pdf">sinusoidal input controller</a>.
+      Both strategies generate nonholonomic motion by cycling through trajectories for controlling individual state variables.
+      Parallel parking exemplifies this type of motion, where a car can move perpendicular to the direction it's facing by alternating between driving forwards and backwards.
+    </p>
+  figures:
+    - caption: Turtlebots.
+      url: /assets/img/steering.png
+  links:
+    - title: report
+      url: /assets/steering-report.pdf
+    - title: video
+      url: https://youtu.be/r6tmWgoy7x0
