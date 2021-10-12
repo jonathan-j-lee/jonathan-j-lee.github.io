@@ -8,6 +8,9 @@ title: Projects
     This page is an archive of my personal projects, which have varying degrees of polish.
     Unfortunately, projects completed for my undergraduate coursework are not open-source, but you can still read about our results.
   </p>
+  {% capture _ %}
+    {% increment fignum %}
+  {% endcapture %}
   {% for project in site.data.projects %}
     <div class="card">
       <h2>{{ project.title }}</h2>
@@ -24,7 +27,7 @@ title: Projects
           <figure>
             <img src="{{ figure.url }}" width="{{ figure.width }}" />
             <figcaption>
-              Fig. {% increment fignum | plus: 10 %}{% if figure.caption %}: {{ figure.caption }}{% endif %}
+              Fig. {% increment fignum %}{% if figure.caption %}: {{ figure.caption }}{% endif %}
             </figcaption>
           </figure>
         {% endfor %}
