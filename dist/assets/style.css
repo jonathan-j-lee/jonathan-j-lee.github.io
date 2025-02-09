@@ -1,0 +1,47 @@
+* {
+  color: #e8e6e3;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+body {
+  margin: 0 auto;
+  max-width: min(100% - 2em, 960px);
+  background-color: #182026;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+canvas#winds {
+  width: 100%;
+  aspect-ratio: 10 / 7;
+}
+
+p#links {
+  /* Hack to position logo along the link underline. Too bad! */
+  & svg {
+    position: absolute;
+    margin-top: 0.2em;
+  }
+  & svg + a {
+    margin-left: 1.7em;
+  }
+}
+
+a {
+  border-bottom: 1px dashed;
+  text-decoration: none;
+}
+
+p#load-status {
+  font-size: 0.8em;
+  & .indicator {
+    color: #D1980B;
+  }
+}

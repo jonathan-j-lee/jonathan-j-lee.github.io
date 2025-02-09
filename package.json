@@ -2,11 +2,18 @@
   "name": "jonathan-l.ee",
   "version": "0.1.0",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode=production",
+    "format": "prettier --write app",
     "watch": "webpack --watch",
     "clean": "rm assets/app.js"
   },
   "devDependencies": {
+    "@types/d3-geo": "^3.1.0",
+    "@types/d3-timer": "^3.0.2",
+    "d3-geo": "^3.1.1",
+    "d3-timer": "^3.0.1",
+    "ml-matrix": "^6.12.0",
+    "prettier": "^3.5.0",
     "ts-loader": "^9.5.2",
     "typescript": "^5.7.3",
     "webpack": "^5.97.1",
